@@ -5,6 +5,7 @@
 <script>
 	import Counter from '$lib/Counter.svelte';
 	import Carousel from '$lib/carousel/carousel.svelte';
+	import Map from '$lib/map/map.svelte';
 </script>
 
 <svelte:head>
@@ -31,9 +32,8 @@
 		This is a Test, that the editing works...
 	</h2>
 
-	<!-- <Carousel/> -->
+	<Map/>
 
-	<Counter />
 </section>
 
 <style>
