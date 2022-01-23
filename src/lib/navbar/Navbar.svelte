@@ -18,7 +18,7 @@
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" sveltekit:prefetch href="/">Home</a>
+                    <a class="nav-link" sveltekit:prefetch href="/">Home</a>
                     <a class="nav-link" sveltekit:prefetch href="/about">Anzeige erstellen</a>
                     <a class="nav-link" sveltekit:prefetch href="/todos">Karte</a>
                 </div>

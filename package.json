@@ -9,7 +9,8 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.44.0"
+    "svelte": "^3.44.0",
+    "svelte-carousel": "^1.0.17-rc4"
   },
   "type": "module",
   "dependencies": {
