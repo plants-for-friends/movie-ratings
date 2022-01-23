@@ -4,8 +4,8 @@
 
 <script>
 	import Counter from '$lib/Counter.svelte';
-	import Carousel from '$lib/carousel/carousel.svelte';
-	import Map from '$lib/map/map.svelte';
+	import Carousel from '$lib/carousel/Carousel.svelte';
+	import LMap from '$lib/map/LMap.svelte';
 </script>
 
 <svelte:head>
@@ -32,7 +32,7 @@
 		This is a Test, that the editing works...
 	</h2>
 
-	<Map/>
+	<LMap/>
 
 </section>
 

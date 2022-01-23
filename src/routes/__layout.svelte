@@ -2,7 +2,7 @@
 	import Header from '$lib/header/Header.svelte';
 	import Navbar from '$lib/navbar/Navbar.svelte';
 	import Footer from '$lib/footer/Footer.svelte';
-	import Map from '$lib/map/map.svelte';
+	import LMap from '$lib/map/LMap.svelte';
 	import '../app.css';
 </script>
 
