@@ -1,10 +1,12 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
+	import Navbar from '$lib/navbar/Navbar.svelte';
 	import Footer from '$lib/footer/Footer.svelte';
 	import '../app.css';
 </script>
 
-<Header />
+<!-- <Header /> -->
+	<Navbar/>
 
 <main>
 	<slot />
@@ -34,9 +36,9 @@
 		padding: 40px;
 	}
 
-	footer a {
+	/* footer a {
 		font-weight: bold;
-	}
+	} */
 
 	@media (min-width: 480px) {
 		footer {
