@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/routes/__error.svelte",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1643189100159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643189126856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,14 @@\n           title: `${status}: ${error.message}`\r\n         }\r\n       };\r\n     }\r\n-  </script>\r\n+</script>\r\n    \r\n-  <script>\r\n+<script>\r\n     export let title;\r\n-  </script>\r\n-   \r\n-  <svelte:head>\r\n+</script>\r\n\\ No newline at end of file\n+\r\n+<svelte:head>\r\n     <title>{title}</title>\r\n-  </svelte:head>\r\n-  <h1>{title}</h1>\n+</svelte:head>\r\n+    <h1>{title}</h1>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1643189100159,
+            "name": "Commit-0",
+            "content": "<script context=\"module\">\r\n    export function load({ error, status }) {\r\n      return {\r\n        props: {\r\n          title: `${status}: ${error.message}`\r\n        }\r\n      };\r\n    }\r\n  </script>\r\n   \r\n  <script>\r\n    export let title;\r\n  </script>\r\n   \r\n  <svelte:head>\r\n    <title>{title}</title>\r\n  </svelte:head>\r\n  <h1>{title}</h1>"
+        }
+    ]
+}

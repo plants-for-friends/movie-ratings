@@ -3,7 +3,7 @@
 </script>
 <svelte:head>
 <title>my-sveltekit-app | Home Page</title>
-    <html lang="en-GB" />
+    <html lang="de" /> 
 </svelte:head>
 
 <h1>Welcome to SvelteKit</h1>
