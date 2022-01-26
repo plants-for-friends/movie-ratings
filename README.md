@@ -12,4 +12,4 @@
 - Nur SvelteKit, keine Deno?
 - Dokumentation über Github und Kommentare und ausreichend? (README erfoderlich)
 - Umfang zufiredenstellend
-- OpenSource: PullRequests, Forks, eigenes Repo, wie machen? (ggf. Lizens angeben)
+- OpenSource: PullRequests, Forks, eigenes Repo, wie machen? (ggf. Lizens angeben) -> MIT Lizenz
