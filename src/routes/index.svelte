@@ -32,6 +32,7 @@
 		This is a Test, that the editing works...
 	</h2>
 
+	<!-- <Carousel/> -->
 	<LMap/>
 
 </section>
