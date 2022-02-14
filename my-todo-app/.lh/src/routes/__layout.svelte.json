@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/routes/__layout.svelte",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1644825536046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644825560722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <script>\n \timport '../app.css';\n </script>\n \n-<div class= \"\">\n+<div class=\" container mx-auto my-6 max-w-lg\">\n \t<slot />\n </div>\n"
+                }
+            ],
+            "date": 1644825536046,
+            "name": "Commit-0",
+            "content": "<script>\n\timport '../app.css';\n</script>\n\n<div class= \"\">\n\t<slot />\n</div>\n"
+        }
+    ]
+}

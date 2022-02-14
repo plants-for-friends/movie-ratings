@@ -1,0 +1,30 @@
+{
+    "sourceFile": "tailwind.config.cjs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1644825663913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644825674113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const config = {\n-\tpurge: [],\n+\t// purge: [],\n \tcontent: ['./src/**/*.{html,js,svelte,ts}'],\n \n \ttheme: {\n \t\textend: {}\n"
+                },
+                {
+                    "date": 1644825681974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n const config = {\n-\t// purge: [],\n \tcontent: ['./src/**/*.{html,js,svelte,ts}'],\n \n \ttheme: {\n \t\textend: {}\n"
+                },
+                {
+                    "date": 1644825728575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const config = {\n+\tpurge: ['./src/**/*.svelte', './src/**/*.css'],\n \tcontent: ['./src/**/*.{html,js,svelte,ts}'],\n \n \ttheme: {\n \t\textend: {}\n"
+                }
+            ],
+            "date": 1644825663913,
+            "name": "Commit-0",
+            "content": "const config = {\n\tpurge: [],\n\tcontent: ['./src/**/*.{html,js,svelte,ts}'],\n\n\ttheme: {\n\t\textend: {}\n\t},\n\n\tplugins: []\n};\n\nmodule.exports = config;\n"
+        }
+    ]
+}

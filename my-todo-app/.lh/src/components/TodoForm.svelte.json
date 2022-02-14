@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/components/TodoForm.svelte",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1644826039758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644826218730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n-hey\n\\ No newline at end of file\n+<form>\r\n+    <label for=\"todo\"></label>\r\n+    <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"\r\n+</form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826229055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n <form>\r\n     <label for=\"todo\"></label>\r\n-    <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"\r\n+    <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"/>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826259330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n <form>\r\n-    <label for=\"todo\"></label>\r\n-    <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"/>\r\n+    <div>\r\n+        <label for=\"todo\"></label>\r\n+        <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"/>\r\n+    </div>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826311602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,6 @@\n     <div>\r\n         <label for=\"todo\"></label>\r\n         <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"/>\r\n     </div>\r\n+    <button type=\"submit\" class=\"\">Submit</button>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826379321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-<form>\r\n-    <div>\r\n+<form class=\"my-6\">\r\n+    <div class=\"flex flex.col text-sm mb-2\">\r\n         <label for=\"todo\"></label>\r\n         <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"/>\r\n     </div>\r\n     <button type=\"submit\" class=\"\">Submit</button>\r\n"
+                },
+                {
+                    "date": 1644826389753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <form class=\"my-6\">\r\n     <div class=\"flex flex.col text-sm mb-2\">\r\n-        <label for=\"todo\"></label>\r\n+        <label for=\"todo\">Todo</label>\r\n         <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"/>\r\n     </div>\r\n     <button type=\"submit\" class=\"\">Submit</button>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826420892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <form class=\"my-6\">\r\n-    <div class=\"flex flex.col text-sm mb-2\">\r\n+    <div class=\"flex flex-col text-sm mb-2\">\r\n         <label for=\"todo\">Todo</label>\r\n         <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"/>\r\n     </div>\r\n     <button type=\"submit\" class=\"\">Submit</button>\r\n"
+                },
+                {
+                    "date": 1644826492816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <form class=\"my-6\">\r\n     <div class=\"flex flex-col text-sm mb-2\">\r\n-        <label for=\"todo\">Todo</label>\r\n-        <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\"/>\r\n+        <label class=\" font-bold mb-2 text-gray-800\" for=\"todo\">Todo</label>\r\n+        <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200\"/>\r\n     </div>\r\n     <button type=\"submit\" class=\"\">Submit</button>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826559739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <form class=\"my-6\">\r\n     <div class=\"flex flex-col text-sm mb-2\">\r\n         <label class=\" font-bold mb-2 text-gray-800\" for=\"todo\">Todo</label>\r\n-        <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200\"/>\r\n+        <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n     </div>\r\n     <button type=\"submit\" class=\"\">Submit</button>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826634608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n     <div class=\"flex flex-col text-sm mb-2\">\r\n         <label class=\" font-bold mb-2 text-gray-800\" for=\"todo\">Todo</label>\r\n         <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n     </div>\r\n-    <button type=\"submit\" class=\"\">Submit</button>\r\n+    <button type=\"submit\" class=\"w-full shadow-sm rounded bg-blue-500 hover:bg-blue600\">Submit</button>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826658982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n     <div class=\"flex flex-col text-sm mb-2\">\r\n         <label class=\" font-bold mb-2 text-gray-800\" for=\"todo\">Todo</label>\r\n         <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n     </div>\r\n-    <button type=\"submit\" class=\"w-full shadow-sm rounded bg-blue-500 hover:bg-blue600\">Submit</button>\r\n+    <button type=\"submit\" class=\"w-full shadow-sm rounded bg-blue-500 hover:bg-blue600 text-white py-2 px-4\">Submit</button>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826697562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,8 @@\n+<script>\r\n+    let todo = \"\"\r\n+</script>\r\n+\r\n <form class=\"my-6\">\r\n     <div class=\"flex flex-col text-sm mb-2\">\r\n         <label class=\" font-bold mb-2 text-gray-800\" for=\"todo\">Todo</label>\r\n         <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n"
+                }
+            ],
+            "date": 1644826039758,
+            "name": "Commit-0",
+            "content": "hey"
+        }
+    ]
+}
