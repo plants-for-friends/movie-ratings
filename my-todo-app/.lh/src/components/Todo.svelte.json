@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1644829433262,
@@ -52,6 +52,10 @@
                 {
                     "date": 1644830551576,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script>\r\n-    import { deleteTodo, toggleTodoComplete } from \"../stores/todoStore.js\";\r\n+    import { deleteTodo, toggleTodoCompleted } from \"../stores/todoStore.js\";\r\n     import { text } from \"svelte/internal\";\r\n     export let todo; \r\n </script>\r\n \r\n@@ -8,9 +8,9 @@\n     <input\r\n         name=\"completed\"\r\n         type=\"checkbox\"\r\n         checked={todo.completed}\r\n-        on:change={() => toggleTodoComplete(todo.id)}\r\n+        on:change={() => toggleTodoCompleted(todo.id)}\r\n         class=\"mr-2 form-checkbox h-5 w-5\"/>\r\n \r\n     <span class={`flex-1 text-gray-800 ${todo.completed ? 'line-through' : ''}`}>{todo.text}</span>\r\n \r\n"
+                },
+                {
+                    "date": 1644830671511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     import { text } from \"svelte/internal\";\r\n     export let todo; \r\n </script>\r\n \r\n-<li class=\"bg-white flex-items-center shadow-sm border border-gray-200 rounded-lg my-2 py-2 px-4\">\r\n+<li class=\"bg-white flex items-center shadow-sm border border-gray-200 rounded-lg my-2 py-2 px-4\">\r\n     <input\r\n         name=\"completed\"\r\n         type=\"checkbox\"\r\n         checked={todo.completed}\r\n"
                 }
             ],
             "date": 1644829433262,
