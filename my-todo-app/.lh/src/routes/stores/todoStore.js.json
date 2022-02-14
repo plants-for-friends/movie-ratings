@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/routes/stores/todoStore.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1644827216958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644827437931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,10 @@\n+import { text } from \"svelte/internal\";\r\n import { writable } from \"svelte/store\";\r\n \r\n\\ No newline at end of file\n-export const todos = writable([]);\n+export const todos = writable([]);\r\n+\r\n+export const addTodo = (text) => {\r\n+    todos.update( (cur) => {\r\n+        const newTodos = [... cur, { text, completed: false, id:Date.now()}]\r\n+    })\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644827459572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n export const todos = writable([]);\r\n \r\n export const addTodo = (text) => {\r\n     todos.update( (cur) => {\r\n-        const newTodos = [... cur, { text, completed: false, id:Date.now()}]\r\n+        const newTodos = [... cur, { text, completed: false, id:Date.now()}];\r\n+        return todos\r\n     })\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644827563963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,11 @@\n \r\n export const addTodo = (text) => {\r\n     todos.update( (cur) => {\r\n         const newTodos = [... cur, { text, completed: false, id:Date.now()}];\r\n-        return todos\r\n+        return newTodos;\r\n     })\r\n+}\r\n+\r\n+export const deleteTodo = (id) =>{\r\n+    todos.update(todos => todos.filter(todo => todo.id != id));\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644827739930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,17 @@\n }\r\n \r\n export const deleteTodo = (id) =>{\r\n     todos.update(todos => todos.filter(todo => todo.id != id));\r\n+}\r\n+\r\n+export const toggleTodoCompleted = (id) => {\r\n+    todos.update(todos => {\r\n+        let index = -1;\r\n+        for(let i=0; i<todos.length; i++){\r\n+            if(todos[i].id == id) {\r\n+                index = i;\r\n+                break;\r\n+            }\r\n+        }\r\n+    })\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644827940740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,10 @@\n                 index = i;\r\n                 break;\r\n             }\r\n         }\r\n+        if(index != -1) {\r\n+            todos[index].completed = !todos[index].completed;\r\n+        }\r\n+        return todos;\r\n     })\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1644827216958,
+            "name": "Commit-0",
+            "content": "import { writable } from \"svelte/store\";\r\n\r\nexport const todos = writable([]);"
+        }
+    ]
+}

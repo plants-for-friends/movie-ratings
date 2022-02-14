@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/stores/todoStore.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1644830441101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644830509781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n export const deleteTodo = (id) =>{\r\n     todos.update(todos => todos.filter(todo => todo.id != id));\r\n }\r\n \r\n-export const toggleTodoComplete = (id) => {\r\n+export const toggleTodoCompleted = (id) => {\r\n     todos.update(todos => {\r\n         let index = -1;\r\n         for(let i=0; i<todos.length; i++){\r\n             if(todos[i].id == id) {\r\n"
+                },
+                {
+                    "date": 1644830526668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n export const deleteTodo = (id) =>{\r\n     todos.update(todos => todos.filter(todo => todo.id != id));\r\n }\r\n \r\n-export const toggleTodoCompleted = (id) => {\r\n+export const toggleTodoComplete = (id) => {\r\n     todos.update(todos => {\r\n         let index = -1;\r\n         for(let i=0; i<todos.length; i++){\r\n             if(todos[i].id == id) {\r\n"
+                },
+                {
+                    "date": 1644830550150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n export const deleteTodo = (id) =>{\r\n     todos.update(todos => todos.filter(todo => todo.id != id));\r\n }\r\n \r\n-export const toggleTodoComplete = (id) => {\r\n+export const toggleTodoCompleted = (id) => {\r\n     todos.update(todos => {\r\n         let index = -1;\r\n         for(let i=0; i<todos.length; i++){\r\n             if(todos[i].id == id) {\r\n"
+                }
+            ],
+            "date": 1644830441101,
+            "name": "Commit-0",
+            "content": "import { text } from \"svelte/internal\";\r\nimport { writable } from \"svelte/store\";\r\n\r\nexport const todos = writable([]);\r\n\r\nexport const addTodo = (text) => {\r\n    todos.update( (cur) => {\r\n        const newTodos = [... cur, { text, completed: false, id:Date.now()}];\r\n        return newTodos;\r\n    })\r\n}\r\n\r\nexport const deleteTodo = (id) =>{\r\n    todos.update(todos => todos.filter(todo => todo.id != id));\r\n}\r\n\r\nexport const toggleTodoComplete = (id) => {\r\n    todos.update(todos => {\r\n        let index = -1;\r\n        for(let i=0; i<todos.length; i++){\r\n            if(todos[i].id == id) {\r\n                index = i;\r\n                break;\r\n            }\r\n        }\r\n        if(index != -1) {\r\n            todos[index].completed = !todos[index].completed;\r\n        }\r\n        return todos;\r\n    })\r\n}"
+        }
+    ]
+}

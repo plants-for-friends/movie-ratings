@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/components/Todo.svelte",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1644829433262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644829796279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,12 @@\n-hey\n\\ No newline at end of file\n+<script>\r\n+    import { deleteTodo, toggleTodoComplete } from \"src/stores/todoStore\";\r\n+    export let todo; \r\n+</script>\r\n+\r\n+<li class=\"bg-white flex-items-center shadow-sm border border-gray-200 rounded-lg my-2 py-2 px-4\">\r\n+    <input\r\n+        name=\"completed\"\r\n+        type=\"checkbox\"\r\n+        checked={todo.completed}\r\n+        on:change={() => toggleTodoCompleted()}\r\n+</li>\r\n"
+                },
+                {
+                    "date": 1644829806409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n     <input\r\n         name=\"completed\"\r\n         type=\"checkbox\"\r\n         checked={todo.completed}\r\n-        on:change={() => toggleTodoCompleted()}\r\n+        on:change={() => toggleTodoCompleted(todo.id)}\r\n </li>\r\n"
+                },
+                {
+                    "date": 1644829910194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <script>\r\n     import { deleteTodo, toggleTodoComplete } from \"src/stores/todoStore\";\r\n+import { text } from \"svelte/internal\";\r\n     export let todo; \r\n </script>\r\n \r\n <li class=\"bg-white flex-items-center shadow-sm border border-gray-200 rounded-lg my-2 py-2 px-4\">\r\n@@ -8,5 +9,7 @@\n         name=\"completed\"\r\n         type=\"checkbox\"\r\n         checked={todo.completed}\r\n         on:change={() => toggleTodoCompleted(todo.id)}\r\n+        class=\"mr-2 form-checkbox h-5 w-5\"/>\r\n+        <span>{todo.text}</span>\r\n </li>\r\n"
+                },
+                {
+                    "date": 1644830017660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n         type=\"checkbox\"\r\n         checked={todo.completed}\r\n         on:change={() => toggleTodoCompleted(todo.id)}\r\n         class=\"mr-2 form-checkbox h-5 w-5\"/>\r\n-        <span>{todo.text}</span>\r\n+        <span class={`flex-1 text-gray-800 ${todo.completed ? 'line-through' : ''}`}>{todo.text}</span>\r\n </li>\r\n"
+                },
+                {
+                    "date": 1644830065617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <script>\r\n-    import { deleteTodo, toggleTodoComplete } from \"src/stores/todoStore\";\r\n-import { text } from \"svelte/internal\";\r\n+    import { deleteTodo, toggleTodoComplete } from \".../stores/todoStore\";\r\n+    import { text } from \"svelte/internal\";\r\n     export let todo; \r\n </script>\r\n \r\n <li class=\"bg-white flex-items-center shadow-sm border border-gray-200 rounded-lg my-2 py-2 px-4\">\r\n"
+                },
+                {
+                    "date": 1644830075885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script>\r\n-    import { deleteTodo, toggleTodoComplete } from \".../stores/todoStore\";\r\n+    import { deleteTodo, toggleTodoComplete } from \".../stores/todoStore.js\";\r\n     import { text } from \"svelte/internal\";\r\n     export let todo; \r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1644830131239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script>\r\n-    import { deleteTodo, toggleTodoComplete } from \".../stores/todoStore.js\";\r\n+    import { deleteTodo, toggleTodoComplete } from \"../stores/todoStore.js\";\r\n     import { text } from \"svelte/internal\";\r\n     export let todo; \r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1644830358291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,13 @@\n         type=\"checkbox\"\r\n         checked={todo.completed}\r\n         on:change={() => toggleTodoCompleted(todo.id)}\r\n         class=\"mr-2 form-checkbox h-5 w-5\"/>\r\n-        <span class={`flex-1 text-gray-800 ${todo.completed ? 'line-through' : ''}`}>{todo.text}</span>\r\n+\r\n+    <span class={`flex-1 text-gray-800 ${todo.completed ? 'line-through' : ''}`}>{todo.text}</span>\r\n+\r\n+    <button\r\n+        type=\"button\"\r\n+        class=\"text-sm bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline\"\r\n+        on:click={() => deleteTodo(todo.id)}\r\n+    >\r\n </li>\r\n"
+                },
+                {
+                    "date": 1644830375278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,6 @@\n     <button\r\n         type=\"button\"\r\n         class=\"text-sm bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline\"\r\n         on:click={() => deleteTodo(todo.id)}\r\n-    >\r\n+    >Delete</button>\r\n </li>\r\n"
+                },
+                {
+                    "date": 1644830527900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     <input\r\n         name=\"completed\"\r\n         type=\"checkbox\"\r\n         checked={todo.completed}\r\n-        on:change={() => toggleTodoCompleted(todo.id)}\r\n+        on:change={() => toggleTodoComplete(todo.id)}\r\n         class=\"mr-2 form-checkbox h-5 w-5\"/>\r\n \r\n     <span class={`flex-1 text-gray-800 ${todo.completed ? 'line-through' : ''}`}>{todo.text}</span>\r\n \r\n"
+                },
+                {
+                    "date": 1644830551576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script>\r\n-    import { deleteTodo, toggleTodoComplete } from \"../stores/todoStore.js\";\r\n+    import { deleteTodo, toggleTodoCompleted } from \"../stores/todoStore.js\";\r\n     import { text } from \"svelte/internal\";\r\n     export let todo; \r\n </script>\r\n \r\n@@ -8,9 +8,9 @@\n     <input\r\n         name=\"completed\"\r\n         type=\"checkbox\"\r\n         checked={todo.completed}\r\n-        on:change={() => toggleTodoComplete(todo.id)}\r\n+        on:change={() => toggleTodoCompleted(todo.id)}\r\n         class=\"mr-2 form-checkbox h-5 w-5\"/>\r\n \r\n     <span class={`flex-1 text-gray-800 ${todo.completed ? 'line-through' : ''}`}>{todo.text}</span>\r\n \r\n"
+                }
+            ],
+            "date": 1644829433262,
+            "name": "Commit-0",
+            "content": "hey"
+        }
+    ]
+}

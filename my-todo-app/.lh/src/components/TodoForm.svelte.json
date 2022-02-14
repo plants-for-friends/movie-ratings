@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 12,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1644826039758,
@@ -56,6 +56,50 @@
                 {
                     "date": 1644826697562,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,8 @@\n+<script>\r\n+    let todo = \"\"\r\n+</script>\r\n+\r\n <form class=\"my-6\">\r\n     <div class=\"flex flex-col text-sm mb-2\">\r\n         <label class=\" font-bold mb-2 text-gray-800\" for=\"todo\">Todo</label>\r\n         <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n"
+                },
+                {
+                    "date": 1644826863713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n <script>\r\n-    let todo = \"\"\r\n+    let todo = \"\";\r\n </script>\r\n \r\n <form class=\"my-6\">\r\n     <div class=\"flex flex-col text-sm mb-2\">\r\n         <label class=\" font-bold mb-2 text-gray-800\" for=\"todo\">Todo</label>\r\n-        <input type=\"text\" name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n+        <input type=\"text\" bind:value={} name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n     </div>\r\n     <button type=\"submit\" class=\"w-full shadow-sm rounded bg-blue-500 hover:bg-blue600 text-white py-2 px-4\">Submit</button>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826870438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \r\n <form class=\"my-6\">\r\n     <div class=\"flex flex-col text-sm mb-2\">\r\n         <label class=\" font-bold mb-2 text-gray-800\" for=\"todo\">Todo</label>\r\n-        <input type=\"text\" bind:value={} name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n+        <input type=\"text\" bind:value={todo} name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n     </div>\r\n     <button type=\"submit\" class=\"w-full shadow-sm rounded bg-blue-500 hover:bg-blue600 text-white py-2 px-4\">Submit</button>\r\n </form>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1644826927546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n <script>\r\n     let todo = \"\";\r\n+\r\n+    const handleSubmit = () => {\r\n+        console.log(\"submitting\")\r\n+    }\r\n </script>\r\n \r\n <form class=\"my-6\">\r\n     <div class=\"flex flex-col text-sm mb-2\">\r\n"
+                },
+                {
+                    "date": 1644826990279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         console.log(\"submitting\")\r\n     }\r\n </script>\r\n \r\n-<form class=\"my-6\">\r\n+<form class=\"my-6\" on:submit|preventDefault={handleSubmit}>\r\n     <div class=\"flex flex-col text-sm mb-2\">\r\n         <label class=\" font-bold mb-2 text-gray-800\" for=\"todo\">Todo</label>\r\n         <input type=\"text\" bind:value={todo} name=\"todo\" placeholder=\"Things you should do\" class=\"appearance-none shadow-sm border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg\"/>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1644828042421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n <script>\r\n+    import { addTodo } from \"src/routes/stores/todoStore\";\r\n+    \r\n     let todo = \"\";\r\n \r\n     const handleSubmit = () => {\r\n+        addTodo(todo);\r\n+        todo = \"\";\r\n         console.log(\"submitting\")\r\n     }\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1644828068151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script>\r\n-    import { addTodo } from \"src/routes/stores/todoStore\";\r\n+    import { addTodo } from \"src/routes/stores/todoStore.js\";\r\n     \r\n     let todo = \"\";\r\n \r\n     const handleSubmit = () => {\r\n"
+                },
+                {
+                    "date": 1644828096487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n <script>\r\n-    import { addTodo } from \"src/routes/stores/todoStore.js\";\r\n+    import { addTodo } from \"src/routes/stores/todoStore\";\r\n     \r\n     let todo = \"\";\r\n \r\n     const handleSubmit = () => {\r\n         addTodo(todo);\r\n-        todo = \"\";\r\n+        todo = '';\r\n         console.log(\"submitting\")\r\n     }\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1644828111169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script>\r\n-    import { addTodo } from \"src/routes/stores/todoStore\";\r\n+    import { addTodo } from \"../stores/todoStore\";\r\n     \r\n     let todo = \"\";\r\n \r\n     const handleSubmit = () => {\r\n"
+                },
+                {
+                    "date": 1644828699548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script>\r\n-    import { addTodo } from \"../stores/todoStore\";\r\n+    import { addTodo } from \"../stores/todoStore.js\";\r\n     \r\n     let todo = \"\";\r\n \r\n     const handleSubmit = () => {\r\n"
+                },
+                {
+                    "date": 1644828805205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script>\r\n-    import { addTodo } from \"../stores/todoStore.js\";\r\n+    import { addTodo } from \"../routes/stores/todoStore.js\";\r\n     \r\n     let todo = \"\";\r\n \r\n     const handleSubmit = () => {\r\n"
+                },
+                {
+                    "date": 1644828842833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script>\r\n-    import { addTodo } from \"../routes/stores/todoStore.js\";\r\n+    import { addTodo } from \"../stores/todoStore.js\";\r\n     \r\n     let todo = \"\";\r\n \r\n     const handleSubmit = () => {\r\n"
                 }
             ],
             "date": 1644826039758,
