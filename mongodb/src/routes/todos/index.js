@@ -26,7 +26,28 @@ export async function get(request){
 }
 
 export async function post(request){
+	try{
+	const dbConnection = await connectToDatabase()
+	const db = dbConnection.db
+	const collection = db.collection('Test')
 
+	const todo = JSON.parse(request.body)
+
+	await collection.insertOne(todo)
+
+	return {
+		status: 200,
+		body:{
+			status: 'Succes0'
+		}
+	}
+
+	} catch(err){
+		return{
+			status: 500,
+			body: {error: 'Server Error'}
+			  }
+	}
 }
 
 export async function put(request){
