@@ -3,7 +3,6 @@
 </script>
 
 <script>
-	import Counter from '$lib/Counter.svelte';
 
 </script>
 
@@ -12,6 +11,10 @@
 </svelte:head>
 
 <section>
+
+	<main> 
+		<h1>My Todos</h1>
+	</main>
 
 </section>
 
