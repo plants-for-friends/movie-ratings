@@ -22,7 +22,7 @@ export async function connectToDatabase(){
     if (cached.conn) {
         return cached.conn
     }
-}
+
 
 if (!cached.promise){
     const opts = {
@@ -36,6 +36,6 @@ if (!cached.promise){
     }
  })
 }
-cached.conn await cached.promise
+cached.conn = await cached.promise
 return cached.conn
 }
