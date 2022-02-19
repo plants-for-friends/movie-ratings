@@ -1,6 +1,8 @@
 export async function get(request){
 
 	const completed = request.url.searchParams.get('completed') === 'true' ? true : false
+
+	
 	return{
 		status: 200,
 		body:{
