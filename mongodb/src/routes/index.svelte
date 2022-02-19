@@ -17,10 +17,9 @@
 				body: JSON.stringify(todo)
 			})
 		
-		} catch(err)
-			{
-				alert('There was an Error')
-			}
+		} catch(err){
+			alert('There was an Error')
+		}
 
 	}
 
