@@ -22,10 +22,6 @@ export async function connectToDatabase(){
     if (cached.conn) {
         return cached.conn
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 7c698390ce8a9bedde624abe4da3fdd39bc2bc5e
 
 if (!cached.promise){
     const opts = {
