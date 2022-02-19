@@ -3,10 +3,24 @@
 </script>
 
 <script>
-	let text
+	let text = ''
 
 	async function addTodo(){
-		alert(text + 'Todo Added')
+		try{
+			const todo = {
+				text,
+				completed: false
+			}
+			await fetch('/todos.',{
+				method: 'POST',
+				body: JSON.stringify(todo)
+			})
+		
+		} catch(err)
+			{
+				alert('There was an Error')
+			}
+
 	}
 
 </script>
@@ -19,7 +33,7 @@
 
 	<main> 
 		<h1>My Todos</h1>
-		<input type="text" bind:value={text} placeholder ="Enter Todo"/>
+		<input type="text"  placeholder ="Enter Todo" bind:value={text} />
 		<button on:click={addTodo}>Add ToDo</button>
 	</main>
 
