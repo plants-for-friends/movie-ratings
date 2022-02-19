@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import { enhance } from '$lib/form';
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
@@ -175,4 +175,4 @@
 		transition: opacity 0.2s;
 		opacity: 1;
 	}
-</style>
+</style> -->
