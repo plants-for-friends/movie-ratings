@@ -19,8 +19,8 @@
 
 	<main> 
 		<h1>My Todos</h1>
-		<input type="text" bind:value={text} />
-		<button on:click={addTodo} placeholder ="Enter Todo">Add ToDo</button>
+		<input type="text" bind:value={text} placeholder ="Enter Todo"/>
+		<button on:click={addTodo}>Add ToDo</button>
 	</main>
 
 </section>
