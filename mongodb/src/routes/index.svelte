@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Gangs6er </title>
 </svelte:head>
 
 <section>
