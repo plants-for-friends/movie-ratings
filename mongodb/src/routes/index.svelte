@@ -6,7 +6,6 @@
 	let text = ''
 
 	async function addTodo(){
-		text = ""
 		try{
 			const todo = {
 				text,
@@ -16,11 +15,10 @@
 				method: 'POST',
 				body: JSON.stringify(todo)
 			})
-		
 		} catch(err){
 			alert('There was an Error')
 		}
-
+		text = ""
 	}
 
 </script>
