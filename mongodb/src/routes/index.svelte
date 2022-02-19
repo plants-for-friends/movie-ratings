@@ -20,7 +20,7 @@
 	<main> 
 		<h1>My Todos</h1>
 		<input type="text" bind:value={text} />
-		<button on:click={addTodo}>Add ToDo</button>
+		<button on:click={addTodo} placeholder ="Enter Todo">Add ToDo</button>
 	</main>
 
 </section>
@@ -36,6 +36,10 @@
 
 	h1 {
 		width: 100%;
+	}
+
+	input{
+		border: 1px solid black
 	}
 
 </style>
