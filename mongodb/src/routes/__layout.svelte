@@ -6,6 +6,7 @@
 <header />
 
 <main>
+	<Nav />
 	<slot />
 </main>
 
