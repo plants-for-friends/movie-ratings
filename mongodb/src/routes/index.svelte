@@ -6,12 +6,13 @@
 	let text = ''
 
 	async function addTodo(){
+		text = ""
 		try{
 			const todo = {
 				text,
 				completed: false
 			}
-			await fetch('/todos.',{
+			await fetch('/todos',{
 				method: 'POST',
 				body: JSON.stringify(todo)
 			})
