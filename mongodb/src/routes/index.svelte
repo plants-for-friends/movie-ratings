@@ -11,11 +11,10 @@
 				method: 'POST',
 				body: JSON.stringify(todo)
 			})
-		
 		} catch(err){
 			alert('There was an Error')
 		}
-
+		text = ""
 	}
 
 </script>
