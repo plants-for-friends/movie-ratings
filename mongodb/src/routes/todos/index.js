@@ -38,7 +38,7 @@ export async function post(request){
 	return {
 		status: 200,
 		body:{
-			status: 'Succes0'
+			status: 'Success'
 		}
 	}
 

@@ -1,12 +1,7 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <script>
 	let text = ''
 
 	async function addTodo(){
-		text = ""
 		try{
 			const todo = {
 				text,
