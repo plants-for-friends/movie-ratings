@@ -1,12 +1,14 @@
 <script>
-	import Nav from '$lib/Nav.Svelte';
+	import Nav from '$lib/Nav.svelte';
 	import '../app.css';
 </script>
 
 <header />
 
 <main>
-	<
+	<Nav />
+	<slot />
+
 </main>
 
 <footer>
