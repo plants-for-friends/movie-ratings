@@ -6,7 +6,12 @@
 <header />
 
 <main>
+<<<<<<< HEAD
 	<
+=======
+	<Nav />
+	<slot />
+>>>>>>> d07a1df58c5c6aa70424ccdb8f6a9bf6f1b2c336
 </main>
 
 <footer>
