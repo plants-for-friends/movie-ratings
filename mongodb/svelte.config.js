@@ -8,9 +8,11 @@ const config = {
 
 		// Override http methods in the Todo forms
 		methodOverride: {
-			allowed: ['PATCH', 'DELETE']
+			allowed: ['PATCH', 'DELETE', 'POST']
 		}
 	},
+
+
 
 	preprocess: [
 		preprocess({
